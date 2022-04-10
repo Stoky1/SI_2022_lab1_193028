@@ -5,7 +5,7 @@ https://github.com/Stoky1/SI_2022_lab1_193028.git
    -$ cd SI_2022_lab1_193028
    -$ git init - фолдерот SI_2022_lab1_193028 станува локално репо 
 
-4. -$ https://github.com/Stoky1/SI_2022_lab1_193028.git
+4. -$ git remote add origin https://github.com/Stoky1/SI_2022_lab1_193028.git
    -со командава ги спојувам оддалечениот(remote) и локалиот репоризориум
 
 5. -$ touch numbers.txt - креираме документ
