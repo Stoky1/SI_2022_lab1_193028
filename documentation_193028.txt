@@ -1,0 +1,72 @@
+https://github.com/Stoky1/SI_2022_lab1_193028.git
+
+
+3. -$ mkdir SI_2022_lab1_193028 - отворам фолдер исто именуван како оддалечениот репозиториум
+   -$ cd SI_2022_lab1_193028
+   -$ git init - фолдерот SI_2022_lab1_193028 станува локално репо 
+
+4. -$ https://github.com/Stoky1/SI_2022_lab1_193028.git
+   -со командава ги спојувам оддалечениот(remote) и локалиот репоризориум
+
+5. -$ touch numbers.txt - креираме документ
+   -$ nano numbers.txt - го отвораме документот, додаваме и зачувуваме
+   -$ git add numbers.txt -за документот да не е modified, го додаваме на сцена
+   -$ git commit -m "Add numbers from 1-5" -правам комит со соодветна порака(коментар)
+
+6. -$ nano numbers.txt 
+   -$ git add numbers.txt 
+   -$ git commit -m "Add numbers from 6-9"
+
+7. -$ nano numbers.txt 
+   -$ git add numbers.txt 
+   -$ git commit -m "Add some words"
+
+9. -$ git checkout HEAD^ numbers.txt
+   -$ git commit -a -m "Changes"
+
+11.-$ git push -u origin master - ги синхрозинират локалниот и оддалечениот репо. 
+Односно се што сме работеле на локално репо се објавуват на GitHub.
+
+12.-$ git branch branch1  - со ова команда се креира гранка branch1
+   -$ git branch branch2  - со ова команда се креира гранка branch2
+
+13.-$ git checkout branch1 - бидејќи со претходната команда само креираме гранка и сеуште сме на master,
+со ова команда се префрламе на гранката branch1
+
+14.-$ touch words.txt
+   -$ nano words.txt
+   -$ git add words.txt
+   -$ git commit -m "Add 5 words" - како и претходно само што сега додадов во новиот документ 5 зборови
+
+16.-$ nano words.txt
+   -$ git commit --amend - се појавуват прозорче каде што имаме можност за измена на пораката од commit командата.
+
+18.-$ git push -u origin branch1 - се што работев на branch1 со оваа команда се синхронизират и објавуват на GitHub.
+
+19.-$ git checkout branch2 - се префрламе на гранката branch2
+
+20.-$ nano numbers.txt
+   -$ git add numbers.txt
+   -$ git commit -m "Add numbers from 10-15"
+
+21.-$ git push -u origin branch2 - се што работев на branch2 со оваа команда се синхронизират и објавуват на GitHub. 
+
+22.-$ git checkout master - се префрламе на главната гранка master
+   -$ git merge branch1 - со оваа команда ја спојуваме гранката branch2 со главната гранка.
+
+23.-$ nano numbers.txt
+   -$ git add numbers.txt
+   -$ git commit -m "Change 1 to 0 and add 100" - заменав 0 на местото на 1, и додадов 100
+
+24.-$ git merge branch2 - со оваа команда сакав да ги спојам branch2  со master гранката, но се јаве конфликт.
+Бидејќи конфликтот шо ми се јавуват со порака:
+Auto-merging numbers.txt
+CONFLICT (content): Merge conflict in numbers.txt
+Automatic merge failed; fix conflicts and then commit the result.
+Одлучив да го решам конфликтот, променувајќи со веќе познати комади, а тие се:
+   -$ nano numbers.txt
+   -$ git add numbers.txt
+   -$ git commit -m "Conflict"
+
+25.-$ git push -u origin master - тука правилно последна синхронизација со GitHub, и све што сме правеле 
+на локално репо префрламе таму.
